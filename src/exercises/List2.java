@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class List2 {
     public static void main(String[] Args) {
-        List2.exercise3();
+        List2.exercise7();
     }
 
     public static void exercise1() {
@@ -67,6 +67,76 @@ public class List2 {
             System.out.printf("Ponderated Medium: %.2f\n", ((x1 * 2) + (x2 * 3) + (x3 * 5))/10);
         }
 
+        sc.close();
+    }
+
+    public static void exercise4(){
+        Scanner sc = new Scanner(System.in);
+
+        double num1, num2;
+        int qty;
+
+        System.out.print("Select how much division operations do you want to make: ");
+        qty = sc.nextInt();
+        System.out.println("Choose 2 numbers to make a division: ");
+
+        for(int i = 0; i < qty; i++){
+            System.out.print("Number 1: ");
+            num1 = sc.nextDouble();
+            System.out.print("Number 2: ");
+            num2 = sc.nextDouble();
+            if(num2 == 0){
+                System.out.println("Impossible division");
+            }
+            else{
+                System.out.println(num1/num2);
+            }
+
+        }
+        sc.close();
+    }
+
+    public static void exercise5(){
+        Scanner sc = new Scanner(System.in);
+
+        int num, aux = 1;
+
+        System.out.print("Choose a number to make a factorial: ");
+        num = sc.nextInt();
+        for(int i = 1; i <= num;i++){
+            aux *= i;
+        }
+        System.out.println(aux);
+
+        sc.close();
+    }
+
+    public static void exercise6(){
+        Scanner sc = new Scanner(System.in);
+
+        int num;
+
+        System.out.print("Select a number and we will show it's divisors: ");
+        num = sc.nextInt();
+        for(int i = 1; i <= num; i++){
+            if(num % i == 0){
+                System.out.println(i);
+            }
+        }
+
+        sc.close();
+    }
+
+    public static void exercise7(){
+        Scanner sc = new Scanner(System.in);
+
+        int num;
+        System.out.println("Select the number to see the square and cube from 1 to the selected number: ");
+        num = sc.nextInt();
+        for(int i = 1; i <= num; i++){
+            System.out.printf("%d %d %d\n", i, i*i, i*i*i);
+        }
+s
         sc.close();
     }
 }
